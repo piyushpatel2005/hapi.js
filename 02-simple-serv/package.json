@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "blipp": "^2.3.0",
     "hapi": "^16.6.2"
   }
 }
