@@ -103,6 +103,10 @@ server.ext('onRequest', function(request, reply) {
 
 The reply interface can be used in two ways. `reply()` is used to send a response to the client. `reply.continue()` is used to continue through the request life cycle. You can pass different type of data to reply object and hapi will figure out the type of object passed to it. We can also modify the custom behviour of reply using custom handlers. Hapi provides plugins that provide a range of custom reply methods and handlers.
 
+### Serving static files
+
+We can serve static files using `inert` module.
+
 ## Validation
 
 Make sure the data is valid, i.e. email is actually email and not simple text.
