@@ -1,0 +1,17 @@
+{
+  "name": "03-routing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blipp": "^2.3.0",
+    "hapi": "^16.6.2"
+  }
+}
