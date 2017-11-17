@@ -50,6 +50,8 @@ You can also define parameters as optional using `?` symbol.
 
 `segment = ['user1', 'user2']`. This can be useful.
 
+For templating, `vision` library is used.
+
 ## Pre-requisites (Pre-processing requests)
 
 Hapi provides something called **Route prerequisites**, which is a function that is executed before the route handler is reached. The operate outside handler but they can communicate with the handler. Async operations finish before the handler is reached.

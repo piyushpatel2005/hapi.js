@@ -1,0 +1,9 @@
+04-static-files@1.0.0 /home/pc/Desktop/programs/hapi.js/05-templating
+├── UNMET PEER DEPENDENCY hapi@16.6.2
+└─┬ vision@5.2.0 
+  ├── boom@7.1.1 
+  ├── hoek@5.0.2 
+  └─┬ joi@13.0.2 
+    ├── isemail@3.0.0 
+    └── topo@3.0.0 
+

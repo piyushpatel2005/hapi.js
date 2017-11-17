@@ -5,7 +5,7 @@ const Hapi = require('hapi');
 const Inert = require('inert');
 
 const server = new Hapi.Server();
-server.connection({ port: 1337, host: 'localhost' });
+server.connection({ port: 4000, host: 'localhost' });
 
 server.register(Inert, (err) => {
 
@@ -16,10 +16,18 @@ server.register(Inert, (err) => {
       path: '/{param*}',
       handler: {
           directory: {
-            // this is available at http://localhost:1337/index.html
-              path: Path.join(__dirname, 'public')
+            path: Path.join(__dirname, 'public')
           }
       }
+  });
+
+  server.ext('onPostHandler', function(request, reply) {
+    // get the prepared response  at onPostHandler event in request life cycle
+    const response = request.response;
+    if(response.isBoom && response.output.statusCode === 404) {
+      return reply.file('./404.html').code(404);
+    }
+    return reply.continue();
   });
 
   server.start((err) => {
